@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 img {
   width: 40px;
 }
@@ -10,8 +11,8 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: rgb(76, 76, 246);
-  padding: 2rem;
+  background-color: #6e6e6e;
+  padding: 1rem;
 }
 ul a {
   color: black;
@@ -38,5 +39,200 @@ li {
 }
 
 li :hover {
-  box-shadow: inset 0 100px 0 0 #ffffff;
+  box-shadow: inset 0 100px 0 0 #baff39;
+}
+.Portada {
+  background-image: url(./Fondo.gif);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  width: 99vw;
+  height: 85vh;
+}
+.Slogan {
+  font-size: 50px;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-shadow: 6px -2px 4px rgba(0, 255, 42, 0.6);
+  font: bolder;
+}
+.Info2 {
+  align-items: left;
+  justify-content: center;
+}
+.simple-linear {
+  background-color: #555;
+  width: 99vw;
+  height: 85vh;
+}
+
+h1 {
+  text-align: center;
+  width: 50vw;
+  height: 50vh;
+}
+
+h2 {
+  text-align: right;
+  font-size: 50px;
+}
+.Parrafo3 {
+  text-align: right;
+}
+
+.myButton {
+  font-size: 25px;
+  font-weight: bold;
+  background: #eeeeee;
+  color: #333333;
+  border: 2px groove #000000;
+  border-radius: 100px;
+  padding: 1px 30px;
+  letter-spacing: 0px;
+}
+
+.myButton:hover {
+  background: #213970;
+  color: #210070;
+}
+.myButton2 {
+  font-size: 25px;
+  font-weight: bold;
+  background: #eeeeee;
+  color: #333333;
+  border: 2px groove #000000;
+  border-radius: 100px;
+  padding: 1px 30px;
+  letter-spacing: 0px;
+}
+
+.myButton2:hover {
+  background: #ffe042;
+  color: #000000;
+}
+.myButton3 {
+  font-size: 25px;
+  font-weight: bold;
+  background: #eeeeee;
+  color: #333333;
+  border: 2px groove #000000;
+  border-radius: 100px;
+  padding: 1px 30px;
+  letter-spacing: 0px;
+}
+
+.myButton3:hover {
+  background: #00ff2a;
+  color: #333333;
+}
+.myButton4 {
+  font-size: 25px;
+  font-weight: bold;
+  background: #eeeeee;
+  color: #333333;
+  border: 2px groove #000000;
+  border-radius: 100px;
+  padding: 1px 30px;
+  letter-spacing: 0px;
+}
+
+.myButton4:hover {
+  background: #5e001f;
+  color: #00e1d9;
+}
+.myButton5 {
+  font-size: 25px;
+  font-weight: bold;
+  background: #eeeeee;
+  color: #333333;
+  border: 2px groove #000000;
+  border-radius: 100px;
+  padding: 1px 30px;
+  letter-spacing: 0px;
+}
+
+.myButton5:hover {
+  background: #143d59;
+  color: #f4b41a;
+}
+.myButton6 {
+  font-size: 25px;
+  font-weight: bold;
+  background: #eeeeee;
+  color: #333333;
+  border: 2px groove #000000;
+  border-radius: 100px;
+  padding: 1px 30px;
+  letter-spacing: 0px;
+}
+
+.myButton6:hover {
+  background: #f49f1c;
+  color: #1f43f4;
+}
+.myButton7 {
+  font-size: 25px;
+  font-weight: bold;
+  background: #ffffff;
+  color: #333333;
+  border: 2px groove #000000;
+  border-radius: 100px;
+  padding: 1px 30px;
+  letter-spacing: 0px;
+}
+
+.myButton7:hover {
+  background: #283350;
+  color: #f93800;
+}
+.myButton8 {
+  font-size: 25px;
+  font-weight: bold;
+  background: #ffffff;
+  color: #333333;
+  border: 2px groove #000000;
+  border-radius: 100px;
+  padding: 1px 30px;
+  letter-spacing: 0px;
+}
+
+.myButton8:hover {
+  background: #d9302c;
+  color: #000000;
+}
+.myButton9 {
+  font-size: 25px;
+  font-weight: bold;
+  background: #ffffff;
+  color: #333333;
+  border: 2px groove #000000;
+  border-radius: 100px;
+  padding: 1px 30px;
+  letter-spacing: 0px;
+}
+
+.myButton9:hover {
+  background: #5d1d88;
+  color: #ffb700;
+}
+.Fondo2 {
+  background: linear-gradient(#555, #ff6e4a);
+  width: 99vw;
+  height: 85vh;
+}
+
+.myButton0 {
+  font-size: 10px;
+  font-weight: bold;
+  background: #6e6e6e;
+  color: #333333;
+  border: 2px groove #000000;
+  border-radius: 100px;
+  padding: 1px 1px;
+  letter-spacing: 1px;
+}
+
+.myButton0:hover {
+  background: #5e001f;
+  color: #00e1d9;
 }
