@@ -3,7 +3,9 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+body {
+  background: linear-gradient(#bff098, #6fd6ff);
+}
 img {
   width: 40px;
 }
@@ -11,7 +13,7 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #6e6e6e;
+  background-color: #bff098;
   padding: 1rem;
 }
 ul a {
@@ -24,29 +26,64 @@ ul {
   gap: 15px;
 }
 li {
-  color: #fff;
-  border: 2px solid rgb(21, 21, 21);
-  border-radius: 0px;
-  display: inline-block;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 14px;
-  letter-spacing: 1px;
+  font-size: 12px;
+  width: 8em;
+  height: 2em;
+  color: orange;
+  border-left: 0.08em solid;
+  position: relative;
+  margin-top: 0.8em;
   cursor: pointer;
-  box-shadow: inset 0 0 0 0 black;
-  -webkit-transition: ease-out 0.4s;
-  -moz-transition: ease-out 0.4s;
-  transition: ease-out 0.4s;
 }
 
-li :hover {
-  box-shadow: inset 0 100px 0 0 #baff39;
+li::before,
+li::after {
+  content: "";
+  position: absolute;
+  width: inherit;
+  border-left: inherit;
+  z-index: -1;
+}
+
+li::before {
+  height: 80%;
+  top: 10%;
+  left: calc(-0.15em - 0.08em * 2);
+  filter: brightness(0.8);
+}
+
+li::after {
+  height: 60%;
+  top: 20%;
+  left: calc(-0.15em * 2 - 0.08em * 3);
+  filter: brightness(0.6);
+}
+
+li span {
+  position: relative;
+  height: 120%;
+  top: -10%;
+  box-sizing: border-box;
+  border: 0.08em solid;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  text-transform: capitalize;
+  transform: translateX(calc(-0.15em * 3 - 0.08em * 2));
+  transition: 0.3s;
+}
+
+li:hover span {
+  transform: translateX(0.15em);
 }
 .Portada {
   background-image: url(./Fondo.gif);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  width: 99vw;
+  width: 100vw;
   height: 85vh;
 }
 .Slogan {
@@ -56,26 +93,23 @@ li :hover {
   text-shadow: 6px -2px 4px rgba(0, 255, 42, 0.6);
   font: bolder;
 }
-.Info2 {
-  align-items: left;
-  justify-content: center;
-}
+
 .simple-linear {
-  background-color: #555;
-  width: 99vw;
+  background: linear-gradient(#bff098, #c5f6a7);
+  width: 100vw;
   height: 85vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
 
-h1 {
+.h1 {
   text-align: center;
   width: 50vw;
   height: 50vh;
+  font-size: 170%;
 }
 
-h2 {
-  text-align: right;
-  font-size: 50px;
-}
 .Parrafo3 {
   text-align: right;
 }
@@ -216,23 +250,311 @@ h2 {
   color: #ffb700;
 }
 .Fondo2 {
-  background: linear-gradient(#555, #ff6e4a);
+  background: linear-gradient(#bff098, #c5f6a7);
   width: 99vw;
-  height: 85vh;
+  height: 40vh;
+  display: flex;
 }
 
 .myButton0 {
   font-size: 10px;
   font-weight: bold;
   background: #6e6e6e;
-  color: #333333;
+  color: #fff;
   border: 2px groove #000000;
   border-radius: 100px;
   padding: 1px 1px;
   letter-spacing: 1px;
+  outline: 1px solid #5e001f;
+  transition: outline 1s linear 0s;
 }
 
 .myButton0:hover {
   background: #5e001f;
-  color: #00e1d9;
+
+  outline: 2px solid #00e1d9;
+}
+.Monedas {
+  padding: 20px;
+  width: 45vw;
+  height: 55vh;
+}
+.Texto {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  width: 45vw;
+  height: 55vh;
+  text-align: right;
+  font-size: 50px;
+}
+h4 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 20px;
+}
+.caja {
+  background-color: #1a237e;
+  width: 99vw;
+  height: 40vh;
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
+}
+
+.container {
+  width: 1000px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: 100px;
+}
+
+.container .card {
+  position: relative;
+  border-radius: 10px;
+}
+
+.container .card .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f00;
+  transition: 0.7s;
+  z-index: 1;
+}
+
+.container .card:nth-child(1) .icon {
+  background: #e07768;
+}
+
+.container .card:nth-child(2) .icon {
+  background: #6eadd4;
+}
+
+.container .card:nth-child(3) .icon {
+  background: #4aada9;
+}
+
+.container .card .icon .fa {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  transition: 0.7s;
+  color: #fff;
+}
+
+i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  transition: 0.7s;
+  color: #fff;
+}
+
+.container .card .face {
+  width: 300px;
+  height: 200px;
+  transition: 0.5s;
+}
+
+.container .card .face.face1 {
+  position: relative;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transform: translateY(100px);
+}
+
+.container .card:hover .face.face1 {
+  background: #ff0057;
+  transform: translateY(0px);
+}
+
+.container .card .face.face1 .content {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.container .card:hover .face.face1 .content {
+  opacity: 1;
+}
+
+.container .card .face.face1 .content i {
+  max-width: 100px;
+}
+
+.container .card .face.face2 {
+  position: relative;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  transform: translateY(-100px);
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.container .card:hover .face.face2 {
+  transform: translateY(0);
+}
+
+.container .card .face.face2 .content p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #414141;
+}
+
+.container .card .face.face2 .content h3 {
+  margin: 0 0 10px 0;
+  padding: 0;
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  color: #414141;
+}
+
+.container a {
+  text-decoration: none;
+  color: #414141;
+}
+.fondo3 {
+  background: linear-gradient(#bff098, #6fd6ff);
+  width: 100vw;
+  height: 100vh;
+}
+.Footer {
+  background-color: #6fd6ff;
+  width: 100vw;
+  height: 50vh;
+  position: relative;
+  display: inline-flex;
+
+  justify-content: space-evenly;
+
+  position: relative;
+}
+.container12 {
+  width: 100vw;
+  height: 10vh;
+  justify-content: center;
+  background-color: #6fd6ff;
+  padding-left: 25%;
+}
+.p {
+  width: 20vw;
+  height: 20vh;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.container13 {
+  width: 30vw;
+  height: 30vh;
+  padding: 10px;
+  text-decoration: none;
+}
+.logo2 {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+}
+.container14 {
+  width: 30vw;
+  height: 30vh;
+  padding: 10px;
+  text-decoration: none;
+}
+@media (max-width: 1024px) {
+  .Portada {
+    width: 1020px;
+    height: 1000px;
+  }
+  .container {
+    width: 20px;
+    padding: 5px;
+    margin: 60px;
+    height: 1px;
+  }
+  .fondo3 {
+    height: 650px;
+  }
+  .Texto {
+    height: 400px;
+  }
+  .Monedas {
+    height: 200px;
+  }
+  .Fondo2 {
+    height: 500px;
+  }
+  .simple-linear {
+    height: 800px;
+    width: 1010px;
+  }
+  .h1 {
+    width: 1000px;
+  }
+}
+@media (min-width: 390px) {
+  .Portada {
+    width: 390px;
+    height: 850px;
+  }
+  .simple-linear {
+    width: 390px;
+    height: 800px;
+  }
+  .Texto {
+    width: 290px;
+    height: 250px;
+  }
+  .Monedas {
+    height: 390px;
+    display: block;
+    padding: 30px;
+    margin: 40px;
+  }
+  .Fondo2 {
+    height: 800px;
+    display: block;
+  }
+  .fondo3 {
+    display: block;
+    height: 1300px;
+  }
+  .p {
+    width: 190px;
+    height: 200px;
+  }
+  .container13 {
+    display: block;
+    height: 100px;
+    width: 300px;
+  }
+  .container {
+    display: block;
+    height: 50px;
+  }
+  .container12 {
+    width: 350px;
+  }
+  .Footer {
+    height: 800px;
+    display: block;
+    padding: 50px;
+  }
+  .container14 {
+    width: 350px;
+    height: 20px;
+  }
 }
