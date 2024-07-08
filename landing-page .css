@@ -105,7 +105,7 @@ li:hover span {
 
 .h1 {
   text-align: center;
-  width: 50vw;
+  width: 100vw;
   height: 50vh;
   font-size: 170%;
 }
@@ -474,7 +474,7 @@ i {
   padding: 10px;
   text-decoration: none;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   .Portada {
     width: 1020px;
     height: 1000px;
@@ -482,7 +482,7 @@ i {
   .container {
     width: 20px;
     padding: 5px;
-    margin: 60px;
+    margin: auto;
     height: 1px;
   }
   .fondo3 {
@@ -499,13 +499,14 @@ i {
   }
   .simple-linear {
     height: 800px;
-    width: 1010px;
+    width: 10px;
   }
   .h1 {
     width: 1000px;
+    align-items: center;
   }
 }
-@media (min-width: 390px) {
+@media (max-width: 390px) {
   .Portada {
     width: 390px;
     height: 850px;
@@ -522,7 +523,7 @@ i {
     height: 390px;
     display: block;
     padding: 30px;
-    margin: 40px;
+    margin: auto;
   }
   .Fondo2 {
     height: 800px;
@@ -531,6 +532,7 @@ i {
   .fondo3 {
     display: block;
     height: 1300px;
+    justify-content: space-evenly;
   }
   .p {
     width: 190px;
